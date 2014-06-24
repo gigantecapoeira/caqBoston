@@ -1,0 +1,30 @@
+{
+	"title": "John Faraone",
+	"subtitle": "singer & songwriter",
+	"sections": {
+		"intro": {
+			"padding": 500,
+			"img": "img/file-01.jpg",
+			"name": "John Faraone",
+			"links": {
+				"YouTube": "http://www.youtube.com/user/JohnFaraone",
+				"Instagram": "http://instagram.com/johnfaraone",
+				"Facebook": "https://www.facebook.com/john.faraone.58",
+				"Bandcamp": "http://johnfaraone.bandcamp.com"
+			}
+		},
+		"video": {
+			"padding": 200,
+			"img": "img/file-02.jpg"
+		},
+		"audio": {
+			"padding": 300,
+			"img": "img/file-03.jpg"
+		},
+		"events": {
+			"padding": 200,
+			"img": "img/file-04.jpg",
+			"embed": ""
+		}
+	}
+}

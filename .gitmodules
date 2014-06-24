@@ -1,0 +1,3 @@
+[submodule "js/switchar"]
+	path = js/switchar
+	url = https://github.com/caesarfeta/switchar
