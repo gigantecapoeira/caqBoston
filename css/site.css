@@ -77,12 +77,15 @@ section#intro h2 {
 }
 section#intro h1 {
 	padding-top: 20px;
-	color: #EDD1BC;
 	margin-bottom: 40px;
 }
 section#intro h2 {
 	font-style: italic;
 	font-size: 20px;
+}
+section#intro h4 {
+	margin: 0;
+	padding: 0;
 }
 
 section#intro a {
@@ -125,6 +128,10 @@ section#events h2 {
 	-webkit-border-radius: 2px;
 	border-radius: 2px; /* future proofing */
 	-khtml-border-radius: 2px; /* for old Konqueror browsers */
+}
+
+.mini {
+	margin-top: 20px;
 }
 
 #social {
