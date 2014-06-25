@@ -70,7 +70,7 @@ h1, h2, h3, h4, h5 {
 section#intro h1,
 section#intro h2 {
 	text-align: center;
-	color: #AAA;
+	color: #666;
 	margin:0;
 	padding:0;
 	line-height: 1em;
@@ -100,7 +100,7 @@ section#events h2 {
 
 
 .block {
-	background-color: rgba( 0,0,0,0.7 );
+	background-color: rgba( 255, 255, 255, 0.95 );
 	padding: 20px;
 	margin-bottom: 10px;
 }
@@ -121,6 +121,15 @@ section#events h2 {
 .event div {
 	margin-bottom: 5px;
 	padding: 10px;
+}
+
+.align-right h1,
+.align-right h2,
+.align-right h3,
+.align-right h4,
+.align-right p,
+.align-right div {
+	text-align: right;
 }
 
 .block {
