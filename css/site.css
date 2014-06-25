@@ -13,16 +13,20 @@ html, body {
 }
 
 p, a, li {
-	font-family: 'Georgia', serif;
+	font-family: 'Helvetica', 'Arial', sans-serif;
+}
+
+li {
+	list-style: none;
 }
 
 a {
 	font-style: italic;
-	color: #E99708;
+	color: #267b9b;
 }
 
 a:hover {
-	color: #E9A718;
+	color: #34A0C9;
 }
 
 body > section {
@@ -38,22 +42,23 @@ section#extra-info {
 	position: fixed;
 	top:0;
 	z-index: 500;
-	background-color: #EBEBEB;
+	background-color: #40A1C7;
 	width: 100%;
 	display: block;
 	padding: 0 0 0 50px;
 }
 
 section#extra-info .link {
-	font-family: 'Arvo', sans-serif;
+	font-family: 'Oswald', sans-serif;
 	font-style: normal;
+	font-size: 20px;
 	display: inline-block;
 	padding: 10px;
-	color: #C07C05;
+	color: #FAFF83;
 }
 
 section#extra-info .link:hover {
-	color: #C0AC35;
+	color: #FAFF00;
 }
 
 @media (max-width: 350px) {
@@ -63,14 +68,14 @@ section#extra-info .link:hover {
 }
 
 h1, h2, h3, h4, h5 {
-	font-family: 'Arvo', cursive;
+	font-family: 'Oswald', sans-serif;
 	font-weight: normal;
 }
 
 section#intro h1,
 section#intro h2 {
 	text-align: center;
-	color: #666;
+	color: #40A1C7;
 	margin:0;
 	padding:0;
 	line-height: 1em;
@@ -88,11 +93,6 @@ section#intro h4 {
 	padding: 0;
 }
 
-section#intro a {
-	display: inline-block;
-	padding: 10px 10px 0 10px;
-}
-
 section#events h2 {
 	font-size: 25px;
 	color: #666;
@@ -100,7 +100,7 @@ section#events h2 {
 
 
 .block {
-	background-color: rgba( 255, 255, 255, 0.95 );
+	background-color: rgba( 255, 255, 255, 0.8 );
 	padding: 20px;
 	margin-bottom: 10px;
 }
@@ -140,6 +140,7 @@ section#events h2 {
 }
 
 .mini {
+	color: #AAA;
 	margin-top: 20px;
 }
 
