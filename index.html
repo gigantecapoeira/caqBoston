@@ -48,6 +48,7 @@
 <body>
 	<section id="extra-info">
 		<div id="panel">
+			<a class="link" href="#intro">Classes</a>
 			<a class="link" href="#what_is">What Is Capoeira?</a>
 			<a class="link" href="#lineage">Our Lineage</a>
 			<a class="link" href="#music">Music</a>
@@ -70,7 +71,7 @@
 						<div class="row">
 							<div id="social" class="small-12 medium-12 large-12 columns centered">
 								<h4>Mary Flynn Murphy Dance Studio</h4>
-								<h4>730 Broadway, Somerville, MA 02144</h4>
+								<h4><a href="https://www.google.com/maps/place/730+Broadway/@42.400118,-71.113478,17z/data=!3m1!4b1!4m2!3m1!1s0x89e376d898e06d45:0xd62dec7aa032683c">730 Broadway, Somerville, MA 02144</a></h4>
 								<div class="mini">Classes</div>
 								<h4>Wed: 8:00 pm - 10:00 pm</h4>
 								<h4>Sun: 4:00 pm - 6:00 pm</h4>
@@ -152,7 +153,7 @@ He began studying Capoeira in 1981 with Mestre Acordeon and Mestre Jelon, two in
 					<iframe width="640" height="480" src="//www.youtube.com/embed/fpBJUz8Jm98" frameborder="0" allowfullscreen></iframe>
 				</div>
 				<div class="small-12 medium-12 large-4 columns centered">
-					<h4>Community</h4>
+					<h4>Culture</h4>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 				</div>
 			</div>
@@ -184,9 +185,10 @@ He began studying Capoeira in 1981 with Mestre Acordeon and Mestre Jelon, two in
 								<ul>
 									<li><a href="https://www.facebook.com/groups/ithacaCAQ/">Ithaca, NY</a> - Contra-Mestre Graveto, Monitor Onça Preta</li>
 									<li><a href="http://www.newyorkcapoeiracenter.com/">New York, NY</a> - Mestre Ombrinho</li>
-									<li><a href="">Ocracoke, NC</a> - Instrutor Giratorio</li>
-									<li><a href="">Rochester, NY</a> - Monitor Toureiro, Monitor Espiao</li>
-									<li><a href="">San Francisco, CA</a> - Instrutor Tucano</li>
+									<li><a href="http://www.giratorio.net/">Ocracoke, NC</a> - Instrutor Giratorio</li>
+									<li><a href="http://www.rochestercapoeira.com/">Rochester, NY</a> - Monitor Toureiro, Monitor Espiao</li>
+									<li><a href="http://www.caqsf.com/">San Francisco, CA</a> - Instrutor Tucano</li>
+									<li><a href="http://mindfulcapoeira.com/">Mindful Capoeira</a></li>
 								</ul>
 							</div>
 						</div>
@@ -217,10 +219,23 @@ He began studying Capoeira in 1981 with Mestre Acordeon and Mestre Jelon, two in
 		  });
 		});
 		$(document).ready( function(){
+			var tick = 0;
+			var photos = [ 'img/bg/intro.jpg', 'img/bg/intro-2.jpg', 'img/bg/music.jpg' ];
+			var wait = 5;
+			function introPhotos() {
+				setInterval( function() {
+					tick++;
+					$( 'section#intro' ).css({
+						'background-image': 'url('+ photos[ tick % photos.length   ] +')'
+					});
+				}, wait*1000 );
+			}
+			/*
 			var switchar = $('#switchar').switchar({
 				speed: 0,
 				clickable: false
 			}).data('#switchar');
+			*/
 			
 			$( '#next' ).click( function( _e ){
 				switchar.next();
@@ -239,6 +254,7 @@ He began studying Capoeira in 1981 with Mestre Acordeon and Mestre Jelon, two in
 				switchar.goTo( id );
 				_e.preventDefault();
 			});
+			introPhotos();
 		});
 	</script>
 </body>
