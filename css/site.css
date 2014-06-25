@@ -1,3 +1,7 @@
+/*
+Yellow #FFEA00
+
+*/
 * {
 	margin:0;
 	padding:0;
@@ -34,14 +38,14 @@ section#extra-info {
 	position: fixed;
 	top:0;
 	z-index: 500;
-	background-color: #222;
+	background-color: #EBEBEB;
 	width: 100%;
 	display: block;
 	padding: 0 0 0 50px;
 }
 
 section#extra-info .link {
-	font-family: 'Courgette', cursive;
+	font-family: 'Arvo', sans-serif;
 	font-style: normal;
 	display: inline-block;
 	padding: 10px;
@@ -59,7 +63,7 @@ section#extra-info .link:hover {
 }
 
 h1, h2, h3, h4, h5 {
-	font-family: 'Courgette', cursive;
+	font-family: 'Arvo', cursive;
 	font-weight: normal;
 }
 
