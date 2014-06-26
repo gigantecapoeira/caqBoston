@@ -4,11 +4,9 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 	<title>CAQ Boston</title>
-	<link href='http://fonts.googleapis.com/css?family=Nunito:400,700' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Oswald:400,700' rel='stylesheet' type='text/css'>
 	<link href="js/third-party/foundation-5.0.2.custom/css/normalize.css" rel="stylesheet" type="text/css">
 	<link href="js/third-party/foundation-5.0.2.custom/css/foundation.min.css" rel="stylesheet" type="text/css">
-	<link href="js/switchar/css/switchar.css" rel="stylesheet" type="text/css">
 	<link href="css/site.css" rel="stylesheet" type="text/css">
 	
 	<!-- START: Custom Section Styles -->
@@ -24,15 +22,11 @@
 		}
 		section#music .wrap {
 		}
-		section#news_and_events {
-			background-image:url();
-		}
-		section#news_and_events .wrap {
-			padding-top: 200px;
-			background-color: rgba( 255,255,255,0.75 );
-		}
 		section#lineage .wrap {
 			background-color: rgba(155,227,255,0.6);
+		}
+		section#teachers .wrap {
+			background-color: rgba(255,227,155,0.6);
 		}
 		section#community {
 			background-image:url(img/bg/our_friends.jpg);
@@ -48,12 +42,12 @@
 <body>
 	<section id="extra-info">
 		<div id="panel">
-			<img src="img/icon/caq_logo.png" style="position:absolute; top: 5px; right: 5px; width: 80px;"/>
+			<img id="logo" src="img/icon/caq_logo.png"/>
 			<a class="link" href="#intro">Classes</a>
 			<a class="link" href="#what_is">What Is Capoeira?</a>
 			<a class="link" href="#lineage">Our Lineage</a>
+			<a class="link" href="#teachers">Teachers</a>
 			<a class="link" href="#music">Music</a>
-			<!--<a class="link" href="#events">News &amp; Events</a>-->
 			<a class="link" href="#community">CAQ Community</a>
 		</div>
 	</section>
@@ -77,6 +71,7 @@
 								<h4>Wed: 8:00 pm - 10:00 pm</h4>
 								<h4>Sun: 4:00 pm - 6:00 pm</h4>
 								<div class="mini">Check our <a href="https://www.facebook.com/caqboston">Facebook</a> page for updates.</div>
+								<div class="mini">Email any questions to <a href="mailto:gmalsept@gmail.com">gmalsept@gmail.com</a></div>
 							</div>
 						</div>
 					</div>
@@ -87,30 +82,37 @@
 	
 	<section id="what_is">
 		<div class="wrap">
-			
 			<div class="row">
-				<div class="small-12 medium-12 large-8 columns centered">
-					<iframe width="640" height="360" src="//www.youtube.com/embed/Fg7SJIszH-s" frameborder="0" allowfullscreen></iframe>
-				 </div>
-				<div class="small-12 medium-12 large-4 columns centered">
+				<div class="small-12 medium-12 large-4 large-push-8 columns centered">
 					<h4>What is Capoeira?</h4>
-					<p>Capoeira is a Brazilian martial art, hidden in dance. It came to Brazil when slaves were brought from Africa during the mid 1500s. Under the watchful eye of the slave owner, capoeira appeared as a harmless dance. After the abolition of slavery, capoeira survived in the poorer neighborhoods (despite persecution from police) until becoming legalized in the 1930's. Today, capoeira is taught around the world, with each group incorporating its own blend of movements, music, and philosophy.</p>
+					<p>Capoeira is a Brazilian martial art, hidden in dance. It came to Brazil when slaves were brought from Africa during the mid 1500s. After the abolition of slavery, capoeira survived in the poorer neighborhoods (despite persecution from police) until becoming legalized in the 1930's. Today, capoeira is taught around the world, with each group incorporating its own blend of movements, music, and philosophy.</p>
 				</div>
-			</div>
-			
-			<div class="row">
-				<div class="small-12 medium-12 large-4 columns centered align-right">
-					<h4>CAQ Boston</h4>
-					<p>We train and play in a supportive environment that emphasizes a thoughtful, creative, and technically sophisticated approach to capoeira's proud history. To provide a well-rounded experience, most classes begin with music training, then movement training, and finally a roda (pronounced: "HO-duh"), which is where students play each other drawing on what they've learned.</p>
-				</div>
-				<div class="small-12 medium-12 large-8 columns centered">
-					<iframe width="640" height="360" src="//www.youtube.com/embed/RyyV6Mh1mTc" frameborder="0" allowfullscreen></iframe>
-				</div>
+				<div class="small-12 medium-12 large-8 large-pull-4 columns centered">
+					<div class="flex-video">
+						<iframe width="640" height="360" src="//www.youtube.com/embed/Fg7SJIszH-s" frameborder="0" allowfullscreen></iframe>
+					</div>
+				 </div>
 			</div>
 		</div>
 	</section>
 	
-	<section id="lineage">
+	<section id="caq_boston">
+		<div class="wrap">
+			<div class="row">
+				<div class="small-12 medium-12 large-4 columns centered align-right">
+					<h4>CAQ Boston</h4>
+					<p>We train and play in a supportive environment that emphasizes a thoughtful, creative, and technically sophisticated approach to capoeira. Most classes begin with music training, then movement training, and finally a roda (pronounced: "HO-duh"), where we all play each other applying what we practice.</p>
+				</div>
+				<div class="small-12 medium-12 large-8 columns centered">
+					<div class="flex-video">
+						<iframe width="640" height="360" src="//www.youtube.com/embed/RyyV6Mh1mTc" frameborder="0" allowfullscreen></iframe>
+					</div>
+				</div>
+			</div>
+		<div class="wrap">
+	</section>
+	
+	<section id="lineage" class="bio">
 		<div class="wrap">
 			<div class="row">
 				<div class="small-12 medium-12 large-12 columns centered">
@@ -120,13 +122,33 @@
 			<div class="row">
 				<div class="small-12 medium-6 large-6 columns centered">
 					<h3>Mestre Ombrinho</h3>
-					<p><img style="width: 160px; float: left; padding-right: 10px" src="img/fg/ombrinho.jpg" />The head instructor at the <a href="http://capoeiracoop.webs.com/MembersB/EditPage/www.newyorkcapoeiracenter.com">New York Capoeira Center</a> is Mestre Ombrinho. With over 30 years practicing capoeira and over 24 years experience teaching, he is the first North American Capoeira Master. He is renowned for making the art of Capoeira accessible to people of all ages and abilities. 
+					<p><img src="img/fg/ombrinho.jpg" />The head instructor at the <a href="http://capoeiracoop.webs.com/MembersB/EditPage/www.newyorkcapoeiracenter.com">New York Capoeira Center</a> is Mestre Ombrinho. With over 30 years practicing capoeira and over 24 years experience teaching, he is the first North American Capoeira Master. He is renowned for making the art of Capoeira accessible to people of all ages and abilities. 
 
 He began studying Capoeira in 1981 with Mestre Acordeon and Mestre Jelon, two internationally-recognized masters who brought capoeira to the United States. He made his first trip to Brazil in 1985 where he trained with many legendary masters, young and old. Having trained many capoeira styles including Regional, which emphasizes fighting aspects, and Angola, which emphasizes a more thoughtful game, Mestre Ombrinho was drawn to the latter and formed Capoeira Angola Quintal NY.</p>
 				</div>
 				<div class="small-12 medium-6 large-6 columns centered">
 					<h3>Contra-Mestre Graveto</h3>
-					<p><img style="width: 160px; float: left; padding-right: 10px" src="img/fg/graveto.jpg" />Contra-Mestre Graveto has studied and trained under Mestre Ombrinho, Mestre Nô, Contra-Mestre Perere for over 15 years and has dedicated himself to the continuation of Capoeira Angola and in enriching the lives of those whom it touches. In addition to leading a <a href="http://www.vadiacao.net/">group in Ithaca</a>, he provides intensive guidance to students around the country including CAQ Boston.</p>
+					<p><img src="img/fg/graveto.jpg" />Contra-Mestre Graveto has studied and trained under Mestre Ombrinho, Mestre Nô, Contra-Mestre Pererê for over 15 years and has dedicated himself to the continuation of Capoeira Angola and in enriching the lives of those that it touches. In addition to leading a <a href="http://www.vadiacao.net/">group in Ithaca</a>, he provides intensive guidance to students around the country including CAQ Boston.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<section id="teachers" class="bio">
+		<div class="wrap">
+			<div class="row">
+				<div class="small-12 medium-12 large-12 columns centered">
+					<h2>Teachers</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="small-12 medium-6 large-6 columns centered">
+					<h3>Gafa</h3>
+					<p><img src="http://placekitten.com/160/300" />Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				</div>
+				<div class="small-12 medium-6 large-6 columns centered">
+					<h3>Gigante</h3>
+					<p><img src="http://placekitten.com/160/300" />Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 				</div>
 			</div>
 		</div>
@@ -137,25 +159,29 @@ He began studying Capoeira in 1981 with Mestre Acordeon and Mestre Jelon, two in
 			<div class="row">
 				<div class="small-12 medium-12 large-4 columns centered align-right">
 					<h4>Music</h4>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					<p>Music is just as important as movement in our capoeira practice.  The songs, sung in Portuguese, transmit capoeira's history and philosophy. They are played with traditional instruments and employ different rhythms, which are carefully used to establish and react to the tone of the game. The music helps create the movement and the movement helps create the music. Through our music practice we learn how to harmonize and improvise with the people around us inside and outside of the roda.</p>
 				</div>
 				<div class="small-12 medium-12 large-8 columns centered">
-					<iframe width="640" height="360" src="//www.youtube.com/embed/Gvr59fL-W9Q" frameborder="0" allowfullscreen></iframe>
+					<div class="flex-video">
+						<iframe width="640" height="360" src="//www.youtube.com/embed/Gvr59fL-W9Q" frameborder="0" allowfullscreen></iframe>
+				</div>
 				</div>
 			</div>
 		</div>
 	</section>
 	
-	
-	<section id="videos">
+	<section id="culture">
 		<div class="wrap">
 			<div class="row">
-				<div class="small-12 medium-12 large-8 columns centered">
-					<iframe width="640" height="480" src="//www.youtube.com/embed/fpBJUz8Jm98" frameborder="0" allowfullscreen></iframe>
-				</div>
-				<div class="small-12 medium-12 large-4 columns centered">
+				<div class="small-12 medium-12 large-4 large-push-8 columns centered">
 					<h4>Culture</h4>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					<p>Capoeira is a centuries old tradition, which began in Africa, was brought to Brazil, and is now spreading all over the world. It has survived repression from colonial slave-owners and authoritarian governments. CAQ Boston is a part of capoeira's deep tradition and continuing evolution. Whether a beginner or a mestre, we all help create great capoeira by sharing our sounds and movements.</p>
+					<p>You are welcome to join us! <strong>The first class is free.</strong></p>
+				</div>
+				<div class="small-12 medium-12 large-8 large-pull-4 columns centered">
+					<div class="flex-video">
+						<iframe width="640" height="480" src="//www.youtube.com/embed/fpBJUz8Jm98" frameborder="0" allowfullscreen></iframe>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -186,8 +212,8 @@ He began studying Capoeira in 1981 with Mestre Acordeon and Mestre Jelon, two in
 								<ul>
 									<li><a href="https://www.facebook.com/groups/ithacaCAQ/">Ithaca, NY</a> - Contra-Mestre Graveto, Monitor Onça Preta</li>
 									<li><a href="http://www.newyorkcapoeiracenter.com/">New York, NY</a> - Mestre Ombrinho</li>
-									<li><a href="http://www.giratorio.net/">Ocracoke, NC</a> - Instrutor Giratorio</li>
-									<li><a href="http://www.rochestercapoeira.com/">Rochester, NY</a> - Monitor Toureiro, Monitor Espiao</li>
+									<li><a href="http://www.giratorio.net/">Ocracoke, NC</a> - Professor Giratorio</li>
+									<li><a href="http://www.rochestercapoeira.com/">Rochester, NY</a> - Monitor Toureiro, Monitor Espião</li>
 									<li><a href="http://www.caqsf.com/">San Francisco, CA</a> - Instrutor Tucano</li>
 									<li><a href="http://mindfulcapoeira.com/">Mindful Capoeira</a></li>
 								</ul>
@@ -203,22 +229,28 @@ He began studying Capoeira in 1981 with Mestre Acordeon and Mestre Jelon, two in
 	<script type="text/javascript" src="js/third-party/foundation-5.0.2.custom/js/jquery.js"></script>
 	<script type="text/javascript" src="js/third-party/foundation-5.0.2.custom/js/modernizr.js"></script>
 	<script type="text/javascript" src="js/third-party/foundation-5.0.2.custom/js/foundation.min.js"></script>
-	<script type="text/javascript" src="js/switchar/switchar.js"></script>
 	<script type="text/javascript">
 		$(function() {
-		  $('a[href*=#]:not([href=#])').click(function() {
-			if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-			  var target = $(this.hash);
-			  target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-			  if (target.length) {
-				$('html,body').animate({
-				  scrollTop: target.offset().top
-				}, 1000);
-				return false;
-			  }
-			}
-		  });
+			//------------------------------------------------------------
+			//  Scroll to the right section
+			//------------------------------------------------------------
+			$('a[href*=#]:not([href=#])').click(function() {
+				if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+					var target = $(this.hash);
+					target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+					if (target.length) {
+						$('html,body').animate({
+							scrollTop: target.offset().top - $('#extra-info').height()
+
+						}, 1000);
+						return false;
+					}
+				}
+			});
 		});
+		//------------------------------------------------------------
+		//  Image slideshow
+		//------------------------------------------------------------
 		$(document).ready( function(){
 			var tick = 0;
 			var photos = [ 'img/bg/intro.jpg', 'img/bg/intro-2.jpg', 'img/bg/music.jpg' ];
@@ -231,30 +263,6 @@ He began studying Capoeira in 1981 with Mestre Acordeon and Mestre Jelon, two in
 					});
 				}, wait*1000 );
 			}
-			/*
-			var switchar = $('#switchar').switchar({
-				speed: 0,
-				clickable: false
-			}).data('#switchar');
-			*/
-			
-			$( '#next' ).click( function( _e ){
-				switchar.next();
-				_e.preventDefault();
-			});
-			$( '#prev' ).click( function( _e ){
-				switchar.prev();
-				_e.preventDefault();
-			});
-			$( '#calendar' ).click( function( _e ){
-				switchar.goTo( 0 );
-				_e.preventDefault();
-			})
-			$( 'a.summary' ).click( function( _e ){
-				var id = parseInt( $(this).attr( 'id' ).replace( 'click_', '' ) );
-				switchar.goTo( id );
-				_e.preventDefault();
-			});
 			introPhotos();
 		});
 	</script>
