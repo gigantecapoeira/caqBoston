@@ -45,6 +45,30 @@ section.bio img {
 	padding-bottom: 10px;
 }
 
+section#music img,
+section#culture img {
+	margin-bottom: 10px;
+}
+
+section#music h4,
+section#culture h4 {
+	font-size: 40px;
+	position: relative;
+	height: 0;
+	padding: 0;
+	margin: 0;
+}
+
+section#music h4 {
+	text-align: right;
+	right: 20px;
+	color: #A88B4D;
+}
+
+section#culture h4 {
+	left: 20px;
+}
+
 section.bio h2 {
 	text-align: center;
 	margin-bottom: 30px;
@@ -95,6 +119,8 @@ h1, h2, h3, h4, h5 {
 	width: 80px;
 }
 
+#grav_logo {}
+
 section#intro h1,
 section#intro h2 {
 	text-align: center;
@@ -107,6 +133,7 @@ section#intro h2 {
 section#intro h1 {
 	padding-top: 20px;
 	margin-bottom: 40px;
+	text-align: left;
 }
 
 section#intro h2 {
