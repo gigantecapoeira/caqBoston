@@ -10,6 +10,11 @@ html, body {
 
 p, li {
 	font-family: 'Helvetica', 'Arial', sans-serif;
+    line-height: 1.4em;
+}
+
+section#intro #images {
+	display: none;
 }
 
 li {
@@ -119,7 +124,12 @@ h1, h2, h3, h4, h5 {
 	width: 80px;
 }
 
-#grav_logo {}
+#grav_logo {
+	float: left;
+	width: 100px;
+	margin-right: 25px;
+	margin-bottom: 50px;
+}
 
 section#intro h1,
 section#intro h2 {
