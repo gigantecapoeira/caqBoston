@@ -263,8 +263,8 @@ He began studying capoeira in 1981 with Mestre Acordeon and Mestre Jelon, two in
 			//------------------------------------------------------------
 			//  Load all the images
 			//------------------------------------------------------------
-			function loadPhoto( _index ) {
-				if ( _index > photos.length ) {
+			function loadPhotos( _index ) {
+				if ( _index >= photos.length ) {
 					return
 				}
 				var img = new Image();
@@ -272,32 +272,51 @@ He began studying capoeira in 1981 with Mestre Acordeon and Mestre Jelon, two in
 					//------------------------------------------------------------
 					//  Load a new section
 					//------------------------------------------------------------
-					var wrap = $($( 'section#intro').get( 0 )).clone();
-					$($( 'section#intro' ).get( -1 )).after( wrap );
-					$($( 'section#intro' ).get( _index+1 )).css({
-						'background-image': 'url('+ photos[ _index  ] +')'
-					});
-					
+					addPhoto( _index );
+					sizeSections();
 					_index++;
-					loadPhoto( _index );
+					loadPhotos( _index );
 				}
 				img.src = photos[ _index ];
 			}
+			function addPhoto( _index ) {
+				var wrap = intro( 0 ).clone();
+				intro(-1).after( wrap );
+				intro( _index+1 ).css({
+					'background-image': 'url('+ photos[ _index  ] +')'
+				});
+			}
 			function sizeSections() {
-				$( )
-			}
-			/*
-			function introPhotos() {
-				setInterval( function() {
-					tick++;
-					$( 'section#intro' ).css({
-						'background-image': 'url('+ photos[ tick % loaded.length   ] +')'
+				var n = $( 'section#intro' ).length;
+				for ( var i=1; i<n; i++ ) {
+					var section = intro(i)
+					section.css({
+						'margin-top': -1 * section.prev().height()
 					});
-				}, wait*1000 );
+				}
 			}
-			*/
-			loadPhoto( 0 );
-			introPhotos();
+			function intro( _index ) {
+				return $($( 'section#intro' ).get( _index ));
+			}
+			function introTotal() {
+				return $( 'section#intro' ).length;
+			}
+			function switchPhotos() {
+				setTimeout( function() {
+					switchPhotos();
+				}, wait*1000 );
+				tick++;
+				var n = tick % introTotal();
+				intro( n ).css({ opacity:1 });
+				for ( var i=introTotal(); i>0; i-- ) {
+					if ( i == n ) {
+						continue;
+					}
+					intro( i ).css({ opacity:0 });
+				}
+			}
+			loadPhotos( 0 );
+			switchPhotos();
 		});
 	</script>
 </body>

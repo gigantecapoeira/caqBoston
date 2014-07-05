@@ -13,10 +13,6 @@ p, li {
     line-height: 1.4em;
 }
 
-section#intro #images {
-	display: none;
-}
-
 li {
 	list-style: none;
 }
@@ -48,6 +44,14 @@ section.bio img {
 	float: left;
 	padding-right: 20px;
 	padding-bottom: 10px;
+}
+
+section#intro {
+	-webkit-transition: opacity .15s ease-in-out;
+	-moz-transition: opacity .15s ease-in-out;
+	-ms-transition: opacity .15s ease-in-out;
+	-o-transition: opacity .15s ease-in-out;
+	transition: opacity .15s ease-in-out;
 }
 
 section#music img,
