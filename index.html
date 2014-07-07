@@ -193,20 +193,6 @@ He began studying capoeira in 1981 with Mestre Acordeon and Mestre Jelon, two in
 		</div>
 	</section>
 	
-	<!--	
-	<section id="events">
-		<div class="wrap">
-			<div class="row">
-				<h1>News &amp; Events</h1>
-			</div>
-			<div class="row">
-				<div id="event-controls" class="small-12 columns">
-				</div>
-			</div>
-		</div>
-	</section>
-	-->
-	
 	<section id="community">
 		<div class="wrap">
 			<div class="row">
@@ -264,7 +250,11 @@ He began studying capoeira in 1981 with Mestre Acordeon and Mestre Jelon, two in
 			//  Load all the images
 			//------------------------------------------------------------
 			function loadPhotos( _index ) {
+				//------------------------------------------------------------
+				//  Once all the photos are loaded start the switcher
+				//------------------------------------------------------------
 				if ( _index >= photos.length ) {
+					switchPhotos();
 					return
 				}
 				var img = new Image();
@@ -282,8 +272,10 @@ He began studying capoeira in 1981 with Mestre Acordeon and Mestre Jelon, two in
 			function addPhoto( _index ) {
 				var wrap = intro( 0 ).clone();
 				intro(-1).after( wrap );
-				intro( _index+1 ).css({
-					'background-image': 'url('+ photos[ _index  ] +')'
+				var i = _index+1;
+				intro( i ).css({
+					'background-image':'url('+ photos[ _index  ] +')',
+					opacity:0
 				});
 			}
 			function sizeSections() {
@@ -302,21 +294,32 @@ He began studying capoeira in 1981 with Mestre Acordeon and Mestre Jelon, two in
 				return $( 'section#intro' ).length;
 			}
 			function switchPhotos() {
-				setTimeout( function() {
-					switchPhotos();
-				}, wait*1000 );
-				tick++;
-				var n = tick % introTotal();
-				intro( n ).css({ opacity:1 });
-				for ( var i=introTotal(); i>0; i-- ) {
-					if ( i == n ) {
-						continue;
+				setInterval( function() {
+					tick++;
+					var n = tick % introTotal();
+					// intro( n ).css({ visibility:'visible' });
+					intro( n ).css({ opacity:1 });
+					for ( var i=introTotal(); i>0; i-- ) {
+						if ( i == n ) {
+							continue;
+						}
+						intro( i ).css({ 
+							opacity:0 
+						});
+						/*
+						setTimeout( function() {
+							intro( i ).css({ 
+								visibility:'hidden'
+							});
+						}, .15*1000 );
+						*/
 					}
-					intro( i ).css({ opacity:0 });
-				}
+				}, wait*1000 );
 			}
+			$( window ).resize( function() {
+				sizeSections();
+			});
 			loadPhotos( 0 );
-			switchPhotos();
 		});
 	</script>
 </body>
