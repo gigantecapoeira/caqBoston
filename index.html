@@ -297,8 +297,6 @@ He began studying capoeira in 1981 with Mestre Acordeon and Mestre Jelon, two in
 				setInterval( function() {
 					tick++;
 					var n = tick % introTotal();
-					// intro( n ).css({ visibility:'visible' });
-					intro( n ).css({ opacity:1 });
 					for ( var i=introTotal(); i>0; i-- ) {
 						if ( i == n ) {
 							continue;
@@ -306,14 +304,8 @@ He began studying capoeira in 1981 with Mestre Acordeon and Mestre Jelon, two in
 						intro( i ).css({ 
 							opacity:0 
 						});
-						/*
-						setTimeout( function() {
-							intro( i ).css({ 
-								visibility:'hidden'
-							});
-						}, .15*1000 );
-						*/
 					}
+					intro( n ).css({ opacity:1 });
 				}, wait*1000 );
 			}
 			$( window ).resize( function() {
