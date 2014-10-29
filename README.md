@@ -1,5 +1,9 @@
-#caqBoston
+# caqBoston
 Capoeira Angola Quintal Boston website.
 
-# Songs
-Here's where I'll gather song lyrics and translate them before putting them in the layout.
+## Typing Portuguese characters
+	Acute		ó Ó	Option+E  
+	Circumflex	ô Ô	Option+I  
+	Grave		ò Ò	Option+`  
+	Tilde		õ Õ	Option+N -- Only works with "n,N,o,O,a,A"
+	Umlaut		ö Ö	Option+U 

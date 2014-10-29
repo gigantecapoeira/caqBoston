@@ -225,8 +225,47 @@ section#events h2 {
 	font-size: 120%;
 }
 
+.smaller {
+	font-size: .8rem;
+}
+
+.centered > * {
+	text-align: center;
+}
+
 #logo {
 	display: none;
+}
+
+/* songs.html */
+body#songs #the_songs label {
+	color:#DDD;
+}
+body#songs #the_songs p {
+	margin:0;
+	padding:0;
+}
+
+body#songs #the_songs .columns {}
+body#songs #the_songs .columns .wrap {
+	margin-bottom: 80px;
+	padding: 5px 10px;
+	background-color:#f2f2f2;
+}
+body#songs #the_songs .columns .wrap > div {
+	padding: 10px 0;
+}
+body#songs #the_songs .columns .wrap p {
+	font-size: .8rem;
+}
+body#songs em {
+	font-weight:bold;
+}
+body#songs section#intro {
+	margin-top:50px;
+}
+body#songs section#intro h1 {
+	text-align:center;
 }
 
 /* Large Mode Only */
@@ -243,32 +282,7 @@ section#events h2 {
 	.align-right div {
 		text-align: right;
 	}
-}
-
-/* songs.html */
-body#songs #the_songs label {
-	color:#DDD;
-}
-body#songs #the_songs p {
-	margin:0;
-	padding:0;
-}
-body#songs #the_songs div {
-	margin: 0 0 10px 0;
-}
-body#songs #the_songs .columns {
-}
-body#songs #the_songs .columns .wrap {
-	padding: 5px 10px;
-	background-color:#f2f2f2;
-}
-body#songs em {
-	font-weight:bold;
-}
-body#songs section#intro {
-	margin-top:50px;
-}
-body#songs section#intro h1 {
-	margin:0 0 5px 0;
-	padding:0;
+	body#songs #the_songs .columns .wrap p {
+		font-size: 1rem;
+	}
 }
