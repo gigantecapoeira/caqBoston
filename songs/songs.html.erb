@@ -19,7 +19,8 @@
 	<section id="extra-info">
 		<div id="panel">
 			<img id="logo" src="img/icon/caq_logo.png"/>
-			<a class="link" href="index.html">Home</a>
+			<a class="link" href="index.html">[Home]</a>
+			<a id="to_top" class="link" href="#intro">To Top</a>
 		</div>
 	</section>
 	<!-- Introduction -->
@@ -51,11 +52,11 @@
 	<div class="columns small-12">
 	<% data.each do |key,song| %>
 		<div id="<%= key %>" class="row">
-		<% song.each do |key,lang| %>
+		<% 'port eng'.split.each do |lang| %>
 		<div class="columns small-6">
 		<div class="wrap">
-			<h3><%= lang["title"]%></h3>
-			<% lang["stanzas"].each do |stanza| %>
+			<h3><%= song[lang]["title"] %></h3>
+			<% song[lang]["stanzas"].each do |stanza| %>
 				<div>
 				<% stanza.each do |line| %>
 					<% if line["chorus"] == true %>
