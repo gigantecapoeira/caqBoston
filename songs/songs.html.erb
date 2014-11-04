@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html 	xmlns="http://www.w3.org/1999/xhtml"
+		xmlns:og="http://ogp.me/ns#"
+		xmlns:fb="https://www.facebook.com/2008/fbml">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<meta property="og:image" content="http://www.caqboston.com/img/icon/caq_logo_facebook.jpg"/>
+	<link rel="image_src" href="http://www.caqboston.com/img/icon/caq_logo_facebook.jpg"/>
+	<title>CAQ Boston -- Songs</title>
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+	<link href='http://fonts.googleapis.com/css?family=Oswald:400,700' rel='stylesheet' type='text/css'>
+	<link href="js/third-party/foundation-5.0.2.custom/css/normalize.css" rel="stylesheet" type="text/css">
+	<link href="js/third-party/foundation-5.0.2.custom/css/foundation.min.css" rel="stylesheet" type="text/css">
+	<link href="css/site.css" rel="stylesheet" type="text/css">
+</head>
+<body id="songs">
+	<section id="extra-info">
+		<div id="panel">
+			<img id="logo" src="img/icon/caq_logo.png"/>
+			<a class="link" href="index.html">[Home]</a>
+			<a id="to_top" class="link" href="#intro">To Top</a>
+		</div>
+	</section>
+	<!-- Introduction -->
+	<section id="intro">
+		<div class="row">
+			<div class="columns small-12">
+				<div class="centered">
+					<h1>Songs</h1>
+					<p>Below are samples from the official CAQ songbook.</p>
+					<!-- Jump to a song -->
+					<div class="row">
+						<div class="columns small-12">
+						<ul>
+						<% data.each do |key,song| %>
+							<li><a href="#<%= key %>"><%= song["port"]["title"] %></a></li>
+						<% end %>
+						</ul>
+						</div>
+					</div>
+					<!--<p><a href="">Buy a printed copy with all the songs!</a></p>-->
+				</div>
+				<p class="smaller">* words in <em>bold-italics</em> are the chorus.</p>
+			</div>
+		</div>
+	</section>
+	<!-- The Songs -->
+	<section id="the_songs">
+	<div class="row">
+	<div class="columns small-12">
+	<% data.each do |key,song| %>
+		<div id="<%= key %>" class="row">
+		<% 'port eng'.split.each do |lang| %>
+		<div class="columns small-6">
+		<div class="wrap">
+			<h3><%= song[lang]["title"] %></h3>
+			<% song[lang]["stanzas"].each do |stanza| %>
+				<div>
+				<% stanza.each do |line| %>
+					<% if line["chorus"] == true %>
+						<p><em><%= line["line"] %></em></p>
+					<% else %>
+						<p><%= line["line"] %></p>
+					<% end %>
+				<% end %>
+				</div>
+			<% end %>
+		</div>
+		</div>
+		<% end %>
+		</div>
+	<% end %>
+	</div>
+	</div>
+	</section>
+	<!-- Javascript -->
+	<script type="text/javascript" src="js/third-party/foundation-5.0.2.custom/js/jquery.js"></script>
+	<script type="text/javascript" src="js/third-party/foundation-5.0.2.custom/js/modernizr.js"></script>
+	<script type="text/javascript" src="js/third-party/foundation-5.0.2.custom/js/foundation.min.js"></script>
+	<script type="text/javascript" src="js/site.js"></script>
+</body>
+</html>
