@@ -229,7 +229,7 @@ section#events h2 {
 	font-size: .8rem;
 }
 
-.centered > * {
+body#songs .centered > * {
 	text-align: center;
 }
 
