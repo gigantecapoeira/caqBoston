@@ -295,6 +295,7 @@ body#index section#community .wrap {
 body#index #panel_open {
 	display:none;
 	margin:0;
+	padding:2px;
 }
 @media only screen and (max-width: 40em) {
 	body#index #extra-info {
@@ -310,6 +311,10 @@ body#index #panel_open {
 	body#index #panel_open {
 		text-align:left;
 		display:block;
+	}
+	body#index #panel_open img {
+		padding-right: 1rem;
+		width: 75px;
 	}
 }
 

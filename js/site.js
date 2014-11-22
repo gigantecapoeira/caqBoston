@@ -12,19 +12,26 @@ function Helper(){}
 
 Helper.prototype.menushrink = function(){
 	var self = this;
-	$('#panel_open').on( 'touchstart click', function(){
+	$('#panel_open').on( 'touchstart click', function(e){
+		e.preventDefault();
 		self.menutoggle();
 	});
 }
 
 Helper.prototype.menutoggle = function(){
+	var self = this;
+	if ( self.wait == true ) { return }
 	$('#panel').toggleClass('open');
 	if ( $('#panel').hasClass('open') ){
-		$('#panel_open' ).html('-');
+		$('#panel_open .switch' ).html('-');
 	}
 	else {
-		$('#panel_open' ).html('+');
+		$('#panel_open .switch' ).html('+');
 	}
+	self.wait = true;
+	setTimeout(function(){
+		self.wait = false;
+	}, 100 );
 }
 
 var help = new Helper();
@@ -35,7 +42,11 @@ $(function() {
 	
 	//  Scroll to the right section
 	
-	$('a[href*=#]:not([href=#])').click(function() {
+	$('a[href*=#]:not([href=#])').on( 'touchstart click', function(e) {
+		if ( help.wait == true ){
+			e.preventDefault();
+			return
+		}
 		help.menutoggle();
 		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
 			var target = $(this.hash);
