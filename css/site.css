@@ -268,6 +268,50 @@ body#songs section#intro h1 {
 	text-align:center;
 }
 
+/* index.html */
+body#index section#intro {
+	background-image:url(img/bg/intro.jpg);
+}
+body#index section#intro .wrap {
+	padding-top: 400px;
+	background-color: rgba( 255,255,255,0.5 );
+}
+body#index section#music {
+}
+body#index section#music .wrap {
+}
+body#index section#lineage .wrap {
+	background-color: rgba(155,227,255,0.6);
+}
+body#index section#teachers .wrap {
+	background-color: rgba(255,227,155,0.6);
+}
+body#index section#community {
+	background-image:url(img/bg/our_friends.jpg);
+}
+body#index section#community .wrap {
+	background-color: rgba( 255,255,255,0.5 );
+}
+body#index #panel_open {
+	display:none;
+	margin:0;
+}
+@media only screen and (max-width: 40em) {
+	body#index #extra-info {
+		padding:0;
+	}
+	body#index #panel {
+		display:none;
+	}
+	body#index #panel.open {
+		display:block;
+	}
+	body#index #panel_open {
+		text-align:left;
+		display:block;
+	}
+}
+
 /* Large Mode Only */
 @media only screen and (min-width: 64.063em) { 
 	#logo {

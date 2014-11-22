@@ -8,13 +8,22 @@ switch ( bodyId ) {
 		break;
 }
 
-//------------------------------------------------------------
+function Helper(){}
+
+Helper.prototype.menushrink = function(){
+	$('#panel_open').on( 'touchstart click', function(){
+		$('#panel').toggleClass('open');
+	});
+}
+
+var help = new Helper();
+
 //  All pages
-//------------------------------------------------------------
+
 $(function() {
-	//------------------------------------------------------------
+	
 	//  Scroll to the right section
-	//------------------------------------------------------------
+	
 	$('a[href*=#]:not([href=#])').click(function() {
 		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
 			var target = $(this.hash);
@@ -46,33 +55,34 @@ function songs() {
 	});
 }
 
-//------------------------------------------------------------
+
 //  Index
-//------------------------------------------------------------
-function index() {
-	//------------------------------------------------------------
+
+function index() {	
+	
 	//  Image slideshow
-	//------------------------------------------------------------
+
 	$(document).ready( function() {
 		var tick = 0;
 		var photos = [ 'img/bg/mirror_roda.jpg', 'img/bg/music.jpg' ];
 		var wait = 5;
-		//------------------------------------------------------------
+		help.menushrink();
+		
 		//  Load all the images
-		//------------------------------------------------------------
+		
 		function loadPhotos( _index ) {
-			//------------------------------------------------------------
+			
 			//  Once all the photos are loaded start the switcher
-			//------------------------------------------------------------
+			
 			if ( _index >= photos.length ) {
 				switchPhotos();
 				return
 			}
 			var img = new Image();
 			img.onload = function() {
-				//------------------------------------------------------------
+				
 				//  Load a new section
-				//------------------------------------------------------------
+				
 				addPhoto( _index );
 				sizeSections();
 				_index++;
