@@ -304,6 +304,7 @@ body#index #panel_open {
 		display:none;
 	}
 	body#index #panel.open {
+		padding: 0 0 0 25px;
 		display:block;
 	}
 	body#index #panel_open {
