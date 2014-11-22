@@ -11,14 +11,20 @@ switch ( bodyId ) {
 function Helper(){}
 
 Helper.prototype.menushrink = function(){
+	var self = this;
 	$('#panel_open').on( 'touchstart click', function(){
-		$('#panel').toggleClass('open');
-		if ( $('#panel').hasClass('open') ){
-			$('#panel_open' ).html('-');
-			return;
-		}
-		$('#panel_open' ).html('+');
+		self.menutoggle();
 	});
+}
+
+Helper.prototype.menutoggle = function(){
+	$('#panel').toggleClass('open');
+	if ( $('#panel').hasClass('open') ){
+		$('#panel_open' ).html('-');
+	}
+	else {
+		$('#panel_open' ).html('+');
+	}
 }
 
 var help = new Helper();
@@ -30,7 +36,7 @@ $(function() {
 	//  Scroll to the right section
 	
 	$('a[href*=#]:not([href=#])').click(function() {
-		$('#panel').removeClass('open');
+		help.menutoggle();
 		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
 			var target = $(this.hash);
 			target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
