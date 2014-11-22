@@ -270,7 +270,7 @@ body#songs section#intro h1 {
 
 /* index.html */
 body#index section#intro {
-	background-image:url(img/bg/intro.jpg);
+	background-image:url(../img/bg/intro.jpg);
 }
 body#index section#intro .wrap {
 	padding-top: 400px;
@@ -287,7 +287,7 @@ body#index section#teachers .wrap {
 	background-color: rgba(255,227,155,0.6);
 }
 body#index section#community {
-	background-image:url(img/bg/our_friends.jpg);
+	background-image:url(../img/bg/our_friends.jpg);
 }
 body#index section#community .wrap {
 	background-color: rgba( 255,255,255,0.5 );
