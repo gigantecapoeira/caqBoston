@@ -78,7 +78,6 @@ function songs() {
 	});
 }
 
-
 //  Index
 
 function index() {	
@@ -87,74 +86,25 @@ function index() {
 
 	$(document).ready( function() {
 		var tick = 0;
-		var photos = [ 'img/bg/mirror_roda.jpg', 'img/bg/music.jpg' ];
+		var photos = [
+      'img/bg/intro.jpg',
+      'img/bg/mirror_roda.jpg',
+      'img/bg/music.jpg'
+    ];
 		var wait = 5;
 		help.menushrink();
-		
-		//  Load all the images
-		
-		function loadPhotos( _index ) {
-			
-			//  Once all the photos are loaded start the switcher
-			
-			if ( _index >= photos.length ) {
-				switchPhotos();
-				return
-			}
-			var img = new Image();
-			img.onload = function() {
-				
-				//  Load a new section
-				
-				addPhoto( _index );
-				sizeSections();
-				_index++;
-				loadPhotos( _index );
-			}
-			img.src = photos[ _index ];
-		}
-		function addPhoto( _index ) {
-			var wrap = intro( 0 ).clone();
-			intro(-1).after( wrap );
-			var i = _index+1;
-			intro( i ).css({
-				'background-image':'url('+ photos[ _index  ] +')',
-				opacity:0
-			});
-		}
-		function sizeSections() {
-			var n = $( 'section#intro' ).length;
-			for ( var i=1; i<n; i++ ) {
-				var section = intro(i)
-				section.css({
-					'margin-top': -1 * section.prev().height()
-				});
-			}
-		}
-		function intro( _index ) {
-			return $($( 'section#intro' ).get( _index ));
-		}
-		function introTotal() {
-			return $( 'section#intro' ).length;
+		function intro() {
+			return $($( 'section#intro' ).get( 0 ));
 		}
 		function switchPhotos() {
 			setInterval( function() {
 				tick++;
-				var n = tick % introTotal();
-				for ( var i=introTotal(); i>0; i-- ) {
-					if ( i == n ) {
-						continue;
-					}
-					intro( i ).css({ 
-						opacity:0 
-					});
-				}
-				intro( n ).css({ opacity:1 });
+				var n = tick % photos.length;
+				intro().css({
+          "background-image":"url("+photos[n]+")"
+        });
 			}, wait*1000 );
 		}
-		$( window ).resize( function() {
-			sizeSections();
-		});
-		loadPhotos( 0 );
+    switchPhotos();( 0 );
 	});
 }

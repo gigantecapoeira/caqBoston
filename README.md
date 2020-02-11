@@ -1,6 +1,11 @@
 # caqBoston
 Capoeira Angola Quintal Boston website.
 
+## Local server
+
+    python -m SimpleHTTPServer
+    localhost:8000
+
 ## Portuguese diacritics ( aka accents ) with OSX
 	Acute		ó Ó	Option+E  
 	Circumflex	ô Ô	Option+I  
